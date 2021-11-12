@@ -1,0 +1,32 @@
+.intro {
+    background: url('Illusration.png') no-repeat right top ;
+    height: 596px;
+    position: relative;
+    z-index: -1;
+}
+
+.intro__content {
+    position: absolute;
+    top: 50%;
+}
+
+.intro__title {
+    font-size: 51px;
+    line-height: 70px;
+}
+
+.intro__subtitle {
+    font-size: 40px;
+    line-height: 54px;
+    color: #485466;
+}
+
+.intro__button {
+    padding: 8px 16px;
+    background: linear-gradient(112.77deg, #C381DB 0%, #4E92F9 100%);
+    border-radius: 8px;
+    border: none;
+    color: white;
+    box-shadow: 0 17px 20px rgba(49, 69, 255, 0.3);
+}
+

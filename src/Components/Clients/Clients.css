@@ -1,0 +1,16 @@
+.clients {
+    height: 154px;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-image-source: linear-gradient(270deg, rgba(78, 146, 249, 0) 12.63%, rgba(195, 129, 219, 0.4) 54.04%, rgba(78, 146, 249, 0) 100%);
+    border-image-slice: 1;
+    display: flex;
+    align-items: center;
+}
+
+.clients__list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
