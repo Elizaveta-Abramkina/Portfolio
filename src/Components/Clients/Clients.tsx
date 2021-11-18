@@ -1,5 +1,5 @@
 import React from "react";
-import './Clients.css'
+import '../../styles/Clients.css'
 import google from '../../assets/clients-logo/google.png'
 import mailBlaster from '../../assets/clients-logo/mail-blaster.png'
 import microsoft from '../../assets/clients-logo/microsoft.png'

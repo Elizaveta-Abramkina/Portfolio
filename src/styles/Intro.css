@@ -1,8 +1,8 @@
 .intro {
-    background: url('Illusration.png') no-repeat right top ;
+    background: url('../assets/Illusration.png') no-repeat right top ;
     height: 596px;
     position: relative;
-    z-index: -1;
+    margin-top: -90px ;
 }
 
 .intro__content {

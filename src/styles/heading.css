@@ -1,0 +1,14 @@
+.heading {
+    text-align: center;
+}
+
+.heading__title {
+    font-size: 40px;
+    line-height: 48px;
+    color: #242A33;
+    font-weight: 700;
+}
+
+.heading__subtitle {
+    margin-top: 10px;
+}

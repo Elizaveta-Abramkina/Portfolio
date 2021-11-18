@@ -1,11 +1,13 @@
-import React, {useContext} from "react";
-import {Bar} from 'react-chartjs-2'
-import {IDataObj} from "./FinanceTracker";
-import ContextTracker from "../../App"
+import React, {useContext, useState} from "react";
+import {Bar, Line} from 'react-chartjs-2'
+import ContextTracker from "../ContextTracker";
+import '../../styles/FinanceChart.css'
+
 
 const FinanceChart = () => {
 
-    const dataArr = useContext(ContextTracker)
+    const {context: dataArr} = useContext(ContextTracker)
+    const [templateChart, setTemplateChart] = useState(true)
 
     if (dataArr) {
         dataArr.sort(function (a, b) {
@@ -60,14 +62,29 @@ const FinanceChart = () => {
         }
     }
 
+
     return (
         <div>
-            <Bar
-                height={100}
-                width={400}
-                options={options}
-                data={data}
-            />
+            <label className="switch">
+                <input type="checkbox"  onClick={()=>setTemplateChart(!templateChart)}/>
+                <span className="slider round"> </span>
+            </label>
+
+            {templateChart? (
+                <Line
+                    height={100}
+                    width={400}
+                    options={options}
+                    data={data}
+                />
+            ) : (
+                <Bar
+                    height={100}
+                    width={400}
+                    options={options}
+                    data={data}
+                />
+            )}
         </div>
     )
 }

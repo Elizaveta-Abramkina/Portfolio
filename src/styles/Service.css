@@ -1,0 +1,61 @@
+.service {
+    height: 100vh;
+    background: url("../assets/background-items/service-background.png") no-repeat 100% 400%;
+    position: relative;
+}
+
+.heading-container{
+    margin: 90px 0;
+}
+
+.cards-bar {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.card {
+    border-radius: 40px;
+    border: solid 1px rgba(255, 255, 255, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 72px 56px 56px 56px;
+}
+
+.card-blur {
+    background: linear-gradient(137.73deg, rgba(255, 255, 255, 0) 4.16%, rgba(255, 255, 255, 0.5) 102.02%);
+    backdrop-filter: blur(60px);
+}
+
+.card-simple {
+    background-color: white;
+    margin: 0 24px;
+}
+
+.card__icon{
+    width: 135px;
+    height: 135px;
+}
+
+.card__info {
+    margin: 24px;
+}
+
+.card__subtitle {
+    margin: 22px 0 64px;
+}
+
+.card__link {
+    color: #4E92F9;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.card__link::after {
+    width: 24px;
+    height: 13px;
+    margin: 5px;
+    content: url("../assets/arrow.svg");
+}
+

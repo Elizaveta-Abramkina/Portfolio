@@ -2,15 +2,11 @@
     height: 90px;
     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 14.06%, rgba(255, 255, 255, 0.8) 85.42%, rgba(255, 255, 255, 0) 100%);
     backdrop-filter: blur(111px);
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    top: 0px;
-}
-
-.container {
-    width: 1440px;
-    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    /*left: 0px;*/
+    /*right: 0px;*/
+    /*top: 0px;*/
 }
 
 .header__content {
@@ -73,16 +69,16 @@
     left: 3px;
 }
 
-.header__button {
+.button {
     padding: 8px 18px;
     border-radius: 8px;
     margin: 0 16px;
     font-weight: 700;
     color: #4E92F9;
-
+    cursor: pointer;
 }
 
-.header__button_mode_accent{
+.button_mode_accent{
     background: linear-gradient(130deg, #C381DB, #4E92F9);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

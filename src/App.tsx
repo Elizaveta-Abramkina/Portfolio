@@ -1,23 +1,23 @@
 import React, {useState} from 'react';
 import './App.css';
-import Header from "./Components/Header/Header";
-import Intro from './Components/Intro/Intro';
-import Clients from "./Components/Clients/Clients";
-import FinanceTracker, {
-    IDataObj} from "./Components/FinanceTracker/FinanceTracker";
-import FinanceChart from "./Components/FinanceTracker/FinanceChart";
-import ContextTracker from './Components/ContextTracker'
+import {Route, Routes} from "react-router-dom";
+import Home from "./Pages/Home";
+import ChartJS from "./Pages/ChartJS";
+import {IDataObj} from "./Components/FinanceTracker/FinanceTracker";
+import ContextTracker from './Components/ContextTracker';
+import MediaContent from "./Pages/MediaContent";
+
 
 function App() {
-
+    const [context, setContext] = useState<IDataObj[]>([])
     return (
         <div className="App">
-            <Header/>
-            <Intro/>
-            <Clients/>
-            <ContextTracker.Provider value={[context, setContext]}>
-            <FinanceTracker/>
-            <FinanceChart/>
+            <ContextTracker.Provider value={{context, setContext}}>
+            <Routes>
+                <Route path="/" element={<Home/>}/>
+                <Route path="chartjs" element={<ChartJS/>}/>
+                <Route path="media-content" element={<MediaContent/>}/>
+            </Routes>
             </ContextTracker.Provider>
         </div>
     );

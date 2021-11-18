@@ -1,8 +1,10 @@
 import React, {useContext, useState} from "react";
+import ContextTracker from "../ContextTracker";
 import FinanceChart from "./FinanceChart";
-import ContextTracker from "../../App"
+import "../../styles/FinanceTracker.css"
+import Modal from "./Modal";
 
-export interface IDataObj{
+export interface IDataObj {
     date: string,
     finance: number,
 }
@@ -12,8 +14,9 @@ const FinanceTracker = () => {
     const [finance, setFinance] = useState({value: ''});
     const [date, setDate] = useState<{ value: string }>({value: ''})
     const [post, setPost] = useState<string[]>([])
-    const [dataArr, setDataArr] = useState<IDataObj[]>([])
-    const [context, setContext] = useContext(ContextTracker)
+    // const [dataArr, setDataArr] = useState<IDataObj[]>([])
+    const {context: dataArr, setContext: setDataArr} = useContext(ContextTracker)
+    const [open, setOpen] = useState<boolean>(false)
 
     const handleChangeFinance: React.ChangeEventHandler<HTMLInputElement> = (event) => {
         setFinance({value: event.target.value})
@@ -49,7 +52,6 @@ const FinanceTracker = () => {
         }
 
         setDataArr([...dataArr])
-
     }
 
     const handleChangeDate: React.ChangeEventHandler<HTMLInputElement> = (event) => {
@@ -64,13 +66,21 @@ const FinanceTracker = () => {
         }))
     }
 
+    const handleClose = ():void => {
+        setOpen(false)
+    }
+
     return (
-        <div>
+        <div className="finance-tracker">
             <button onClick={handleClick}>Добавить данные</button>
             <input value={finance.value} onFocus={handleFocus} onChange={handleChangeFinance} type='number'/>
             <input value={date.value} onChange={handleChangeDate} type='date'/>
             <ul>{list()}</ul>
-
+            <FinanceChart/>
+            <button onClick={() => setOpen(true)}>Modal</button>
+            <Modal
+                isOpen={open}
+                onClose={handleClose}/>
         </div>
     )
 }
@@ -78,20 +88,3 @@ const FinanceTracker = () => {
 export default FinanceTracker;
 
 
-
-// dataArr.forEach((element)=>{
-//       if(element.date === date.value){
-//           element= {date:'dat', finance:'5'}
-//       }
-//   })
-//
-
-
-// dataArr.map((element)=>{
-//     if(element.date==date.value) {return  (+finance.value+(+element.finance))}
-// })
-//
-// const dataArrSum = dataArr.map((element)=>{
-//      if(element.date==date.value) {return element.finance }
-//  })
-//  console.log(dataArrSum)
