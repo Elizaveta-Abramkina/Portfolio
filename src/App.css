@@ -37,3 +37,22 @@ h1, h2, h3,h4,h5,h6, p {
     line-height: 40px;
 }
 
+.button {
+    border: none;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Nunito', sans-serif;
+    color: #4E92F9;
+    cursor: pointer;
+    background: none;
+}
+
+.button_mode_accent {
+    background: linear-gradient(130deg, #C381DB, #4E92F9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    box-shadow: 0 7px 20px rgba(49, 69, 255, 0.13);
+}
+

@@ -1,10 +1,10 @@
 import React, {useContext, useState} from "react";
 import {Bar, Line} from 'react-chartjs-2'
-import ContextTracker from "../ContextTracker";
+import ContextTracker from "./ContextTracker";
 import '../../styles/FinanceChart.css'
 
 
-const FinanceChart = () => {
+const FinanceChart: React.FC = () => {
 
     const {context: dataArr} = useContext(ContextTracker)
     const [templateChart, setTemplateChart] = useState(true)

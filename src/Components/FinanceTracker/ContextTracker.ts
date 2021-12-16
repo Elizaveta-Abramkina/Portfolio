@@ -1,10 +1,11 @@
 import React from "react";
-import {IDataObj} from "./FinanceTracker/FinanceTracker";
+import {IDataObj} from "./FinanceTracker";
 
-interface IContextTracker {
+export interface IContextTracker {
     context: IDataObj[]
     setContext:  React.Dispatch<React.SetStateAction<IDataObj[]>>
 }
+
 const ContextTracker = React.createContext<IContextTracker> ({}as IContextTracker)
 
 export default ContextTracker;

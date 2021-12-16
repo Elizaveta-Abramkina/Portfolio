@@ -1,14 +1,12 @@
-import React, {useState} from "react";
-import FinanceTracker, {IDataObj} from "../Components/FinanceTracker/FinanceTracker";
-import ContextTracker from "../Components/ContextTracker";
-import Header from "../Components/Header/Header";
+import React from "react";
+import FinanceTracker from "../Components/FinanceTracker/FinanceTracker";
+
 import "../styles/ChartJS.css"
 
 const ChartJS = () => {
 
     return (
         <div className="chartjs">
-            <Header/>
             <FinanceTracker/>
         </div>
     )

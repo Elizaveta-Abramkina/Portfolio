@@ -6,7 +6,7 @@ import microsoft from '../../assets/clients-logo/microsoft.png'
 import netflix from '../../assets/clients-logo/netflix.png'
 import themeWagon from '../../assets/clients-logo/theme-wagon.png'
 
-const Clients = () => {
+const Clients: React.FC = () => {
     return (
         <div className="clients">
             <div className="container">
