@@ -1,0 +1,19 @@
+.not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.not-found__text {
+    margin-top: 80px;
+    font-size: 55px;
+    font-weight: bold;
+}
+
+.not-found__img {
+    border-radius: 50%;
+    box-shadow: 0px 0px 50px 10px rgba(49, 69, 255, 0.3);
+    opacity: 0.75;
+}

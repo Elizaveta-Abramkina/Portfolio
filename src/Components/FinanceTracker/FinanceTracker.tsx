@@ -1,22 +1,20 @@
 import React, {useContext, useState} from "react";
-import ContextTracker from "../ContextTracker";
+import ContextTracker, {IContextTracker} from "./ContextTracker";
 import FinanceChart from "./FinanceChart";
 import "../../styles/FinanceTracker.css"
-import Modal from "./Modal";
+
 
 export interface IDataObj {
     date: string,
     finance: number,
 }
 
-const FinanceTracker = () => {
+const FinanceTracker: React.FC = () => {
 
-    const [finance, setFinance] = useState({value: ''});
+    const [finance, setFinance] = useState<{value:string}>({value: ''});
     const [date, setDate] = useState<{ value: string }>({value: ''})
     const [post, setPost] = useState<string[]>([])
-    // const [dataArr, setDataArr] = useState<IDataObj[]>([])
-    const {context: dataArr, setContext: setDataArr} = useContext(ContextTracker)
-    const [open, setOpen] = useState<boolean>(false)
+    const {context: dataArr, setContext: setDataArr} = useContext<IContextTracker>(ContextTracker)
 
     const handleChangeFinance: React.ChangeEventHandler<HTMLInputElement> = (event) => {
         setFinance({value: event.target.value})
@@ -66,10 +64,6 @@ const FinanceTracker = () => {
         }))
     }
 
-    const handleClose = ():void => {
-        setOpen(false)
-    }
-
     return (
         <div className="finance-tracker">
             <button onClick={handleClick}>Добавить данные</button>
@@ -77,10 +71,6 @@ const FinanceTracker = () => {
             <input value={date.value} onChange={handleChangeDate} type='date'/>
             <ul>{list()}</ul>
             <FinanceChart/>
-            <button onClick={() => setOpen(true)}>Modal</button>
-            <Modal
-                isOpen={open}
-                onClose={handleClose}/>
         </div>
     )
 }

@@ -1,6 +1,6 @@
 .service {
     height: 100vh;
-    background: url("../assets/background-items/service-background.png") no-repeat 100% 400%;
+    background: url("../assets/background-items/service-background.png") no-repeat right top;
     position: relative;
 }
 

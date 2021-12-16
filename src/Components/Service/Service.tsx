@@ -18,30 +18,30 @@ const Service = () => {
                 </div>
                 <div className="cards-bar">
                     <div className="card card-blur">
-                        <img className="card__icon" src={bar}/>
+                        <img className="card__icon" src={bar} alt="#"/>
                         <div className="card__info">
                             <h3 className="card__title text_type_title">Send Texts Instantly</h3>
                             <p className="card__subtitle text_type_simple">Financial planning, forecasting and adjusting rapidly with customer demands and
                                 budgets</p>
-                            <a className='card__link'>Learn More</a>
+                            <a className='card__link' href=" ">Learn More</a>
                         </div>
                     </div>
                     <div className="card card-simple">
-                        <img className="card__icon" src={chart}/>
+                        <img className="card__icon" src={chart} alt="#"/>
                         <div className="card__info">
                             <h3 className="card__title text_type_title">Better Organized</h3>
                             <p className="card__subtitle text_type_simple">Financial planning, forecasting and adjusting rapidly with customer demands and
                                 budgets</p>
-                            <a className='card__link'>Learn More</a>
+                            <a className='card__link' href=" ">Learn More</a>
                         </div>
                     </div>
                     <div className="card card-blur">
-                        <img className="card__icon" src={layer}/>
+                        <img className="card__icon" src={layer} alt="#"/>
                         <div className="card__info">
                             <h3 className="card__title text_type_title">Analytical Statistics</h3>
                             <p className="card__subtitle text_type_simple">Financial planning, forecasting and adjusting rapidly with customer demands and
                                 budgets</p>
-                            <a className='card__link'>Learn More</a>
+                            <a className='card__link' href=" ">Learn More</a>
                         </div>
                     </div>
                 </div>

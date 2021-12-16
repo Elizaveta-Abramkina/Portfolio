@@ -1,4 +1,4 @@
-import React from "react";
+import React, {ReactPortal} from "react";
 import ReactDOM from "react-dom";
 import "../../styles/SignUpModal.css"
 import {MouseEventHandler} from "react";
@@ -10,7 +10,7 @@ type ModalProps = {
     onClose: MouseEventHandler<HTMLDivElement> | undefined
 }
 
-const SignUpModal = ({isOpen, onClose}: ModalProps) => {
+const SignUpModal = ({isOpen, onClose}: ModalProps): null | ReactPortal => {
     if (!isOpen) return null;
     return (
         ReactDOM.createPortal(

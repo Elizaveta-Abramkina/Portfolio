@@ -8,7 +8,7 @@ import smartphone from "../../assets/features-icons/smartphone.png"
 import printer from "../../assets/features-icons/printer.png"
 import pen from "../../assets/features-icons/pen.png"
 
-const Features = () => {
+const Features: React.FC = () => {
     return (
         <div className="features">
             <div className="container">
@@ -23,7 +23,7 @@ const Features = () => {
                 <div className="features-items-bar">
                     <div className="features-items-bar__row">
                         <div className="item">
-                            <div className="item__icon item__icon_color_red"><img src={email}/></div>
+                            <div className="item__icon item__icon_color_red"><img src={email} alt="#"/></div>
                             <div className="item__info">
                                 <h3 className="item__title text_type_title">Encrypted Mail</h3>
                                 <p className="item__subtitle text_type_simple">A process of encrypting email
@@ -31,7 +31,7 @@ const Features = () => {
                             </div>
                         </div>
                         <div className="item">
-                            <div className="item__icon item__icon_color_blue"><img src={monitor}/></div>
+                            <div className="item__icon item__icon_color_blue"><img src={monitor} alt="#"/></div>
                             <div className="item__info">
                                 <h3 className="item__title text_type_title">Display Sharing</h3>
                                 <p className="item__subtitle text_type_simple">With other participants, you may share
@@ -40,7 +40,7 @@ const Features = () => {
                             </div>
                         </div>
                         <div className="item">
-                            <div className="item__icon item__icon_color_yellow"><img src={book}/></div>
+                            <div className="item__icon item__icon_color_yellow"><img src={book} alt="#"/></div>
                             <div className="item__info">
                                 <h3 className="item__title text_type_title">Private Notebook</h3>
                                 <p className="item__subtitle text_type_simple">Private Notebook is an application that
@@ -51,7 +51,7 @@ const Features = () => {
                     </div>
                     <div className="features-items-bar__row">
                         <div className="item">
-                            <div className="item__icon item__icon_color_green"><img src={smartphone}/></div>
+                            <div className="item__icon item__icon_color_green"><img src={smartphone} alt="#"/></div>
                             <div className="item__info">
                                 <h3 className="item__title text_type_title">App App Assistance</h3>
                                 <p className="item__subtitle text_type_simple">App Assistant is quickly and effectively
@@ -60,7 +60,7 @@ const Features = () => {
                             </div>
                         </div>
                         <div className="item">
-                            <div className="item__icon item__icon_color_pink"><img src={printer}/></div>
+                            <div className="item__icon item__icon_color_pink"><img src={printer} alt="#"/></div>
                             <div className="item__info">
                                 <h3 className="item__title text_type_title">Multiple Printing</h3>
                                 <p className="item__subtitle text_type_simple">Our canvas prints are crafted on
@@ -69,7 +69,7 @@ const Features = () => {
                             </div>
                         </div>
                         <div className="item">
-                            <div className="item__icon item__icon_color_mint"><img src={pen}/></div>
+                            <div className="item__icon item__icon_color_mint"><img src={pen} alt="#"/></div>
                             <div className="item__info">
                                 <h3 className="item__title text_type_title">Free Sketch</h3>
                                 <p className="item__subtitle text_type_simple">Our canvas prints are crafted on

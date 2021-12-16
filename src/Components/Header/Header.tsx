@@ -1,12 +1,12 @@
 import React, {useState} from "react";
 import '../../styles/Header.css';
 import logo from '../../assets/Logo.png';
-import {NavLink} from "react-router-dom";
+import {Link} from "react-router-dom";
 import SignUpModal from "./SignUpModal";
-import * as events from "events";
 
 
-const Header = () => {
+
+const Header: React.FC= () => {
     const [open, setOpen] = useState<boolean>(false)
 
     const handleClose = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
@@ -22,19 +22,16 @@ const Header = () => {
                             <img className='logo__img' src={logo} alt='logo'/>
                             <h1 className='logo__text text_type_accent '>Klean</h1>
                         </div>
-
                         <div className='menu header__menu'>
-                            <NavLink className='menu__link' to="/">Home</NavLink>
-                            <NavLink className='menu__link' to='chartjs'>Chart JS</NavLink>
-                            <NavLink className='menu__link' to="media-content">Media content</NavLink>
-                            <a className='menu__link' href='#'>News</a>
-                            <a className='menu__link' href='#'>Contact</a>
+                            <Link className='menu__link' to="/">Home</Link>
+                            <Link className='menu__link' to='/chartjs'>Chart JS</Link>
+                            <Link className='menu__link' to="/media-content">Media content</Link>
+                            <Link className='menu__link' to="/store">Store</Link>
                         </div>
                     </div>
                     <div className='header__right-column'>
-                        <a className='button button_mode_simple' href='#'>Log In</a>
-                        <a className='button button_mode_accent' onClick={() => setOpen(true)}>Sign Up</a>
-
+                        <button className='button button_mode_simple'>Log In</button>
+                        <button className='button button_mode_accent' onClick={() => setOpen(true)}>Sign Up</button>
                     </div>
                     <SignUpModal isOpen={open} onClose={handleClose}/>
                 </div>

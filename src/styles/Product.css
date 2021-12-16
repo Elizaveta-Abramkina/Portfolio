@@ -1,0 +1,130 @@
+.page-product {
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-product__img-box {
+    background-color: rgba(49, 69, 255, 0.08);
+    width: 49.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.page-product__main-box {
+    margin: 20px 0 5px 0;
+    display: flex;
+    align-items: center;
+    border-radius: 10%;
+    width: 95%;
+    overflow: hidden;
+}
+
+.arrow-left {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.arrow-right {
+
+    z-index: 1;
+    position: absolute;
+    right: 0;
+}
+
+.page-product__main-img {
+    height: 100%;
+    width: 100%;
+}
+
+.animation {
+    animation-name: animation;
+    animation-duration: 0.5s;
+}
+
+@keyframes animation {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+
+
+.page-product__img-small {
+    border-radius: 10%;
+    display: flex;
+    flex-direction: row;
+    width: 23%;
+    margin: 1%;
+}
+
+.page-product__img-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.page-product__main-img:hover {
+    transform: scale(1.2);
+}
+
+.details {
+    background-color: rgba(49, 69, 255, 0.08);
+    width: 49.5%;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+.details__title {
+    margin: 15px 0;
+    font-size: 32px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+}
+
+.price_default {
+    font-size: 32px;
+    color: #5A6980;
+}
+
+.price_default-sales {
+    font-size: 24px;
+    color: #5A6980;
+    text-decoration: line-through;
+    opacity: 0.8;
+}
+
+.price_sales {
+    margin: 0 20px 0 15px;
+    font-size: 32px;
+    color: #5A6980;
+}
+
+.button-available {
+    margin: 20% 20px;
+}
+.background {
+    background: white ;
+    display: inline-block;
+    opacity: 0.9;
+    border-radius: 8px;
+
+}
+
+.button_mode_accent {
+    background: linear-gradient(130deg, #C381DB, #4E92F9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    box-shadow: 0 7px 20px rgba(49, 69, 255, 0.13);
+}
+
