@@ -27,6 +27,7 @@ const Header: React.FC= () => {
                             <Link className='menu__link' to='/chartjs'>Chart JS</Link>
                             <Link className='menu__link' to="/media-content">Media content</Link>
                             <Link className='menu__link' to="/store">Store</Link>
+                            <Link className='menu__link' to='/questions'>Questions</Link>
                         </div>
                     </div>
                     <div className='header__right-column'>

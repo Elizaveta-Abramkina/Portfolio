@@ -6,9 +6,10 @@ import Features from "../Components/Features/Features";
 
 const Home = () => {
 
-    return(
+    return (
         <div className="home">
             <Intro/>
+            <div>eljrg</div>
             <Clients/>
             <Service/>
             <Features/>

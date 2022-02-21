@@ -7,8 +7,6 @@ import Product from "./Product";
 import axios from "axios";
 
 
-
-
 const ProductPublication = Yup.object().shape({
         title: Yup.string()
             .min(1, "Enter more characters!")
@@ -37,20 +35,16 @@ const AdminPanel: React.FC = () => {
                         defaultDataProduct
                     }
                     validationSchema={ProductPublication}
-                    onSubmit={ (values)=>{console.log(values)
-
-                        axios
-                            .post('https://www.mockachino.com/bb1d7461-6bdd-47/post', {values})
-                            .then(responce=>console.log(responce.data))
-                            .catch(error=>console.log(error))
-                    }
-                    //     values => {
-                    //     const newContext = [
-                    //         ...context, values
-                    //     ]
-                    //     setContext(newContext)
-                    //     console.log(context)
+                    // onSubmit={ (values)=>{
+                    //     console.log(values)
                     // }
+                    onSubmit={values => {
+                        const newContext = [
+                            ...context, values
+                        ]
+                        setContext(newContext)
+                        console.log(context)
+                    }
                     }
                 >
                     {({values, errors, touched, setFieldValue}) => {
@@ -112,19 +106,19 @@ const AdminPanel: React.FC = () => {
                                            name="description"/>
                                     <label className="product-form__name " htmlFor="img">Images</label>
                                     <input type="file" name="img" id="img" multiple
-                                        onChange={(e: ChangeEvent<HTMLInputElement>) => {
-                                            const reader = new FileReader();
-                                            reader.onload = (e: ProgressEvent<FileReader>) => {
-                                                if (e.target) {
-                                                    setFieldValue('img', e.target.result);
-                                                }
-                                            }
-                                            const target = e.target as HTMLInputElement;
-                                            const files: File = (target.files as FileList)[0]
-                                            if (files) {
-                                                reader.readAsDataURL(files);
-                                            }
-                                        }}
+                                           onChange={(e: ChangeEvent<HTMLInputElement>) => {
+                                               const reader = new FileReader();
+                                               reader.onload = (e: ProgressEvent<FileReader>) => {
+                                                   if (e.target) {
+                                                       setFieldValue('img', e.target.result);
+                                                   }
+                                               }
+                                               const target = e.target as HTMLInputElement;
+                                               const files: File = (target.files as FileList)[0]
+                                               if (files) {
+                                                   reader.readAsDataURL(files);
+                                               }
+                                           }}
                                     />
                                     {values.img ? <img src={values.img} alt="#"/> : null}
                                 </div>

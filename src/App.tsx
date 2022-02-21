@@ -13,6 +13,8 @@ import AdminPanel from "./Components/Store/OnlineStore/AdminPanel";
 import AllProducts from "./Components/Store/OnlineStore/AllProducts";
 import Product from "./Components/Store/OnlineStore/Product";
 
+import Questions from "./Components/Questions/Questions";
+
 
 const App: React.FunctionComponent = () => {
     const [context, setContext] = useState<IDataObj[]>([])
@@ -24,8 +26,9 @@ const App: React.FunctionComponent = () => {
                         <Route index element={<Home/>}/>
                         <Route path="chartjs" element={<ChartJS/>}/>
                         <Route path="media-content" element={<MediaContent/>}/>
-                        <Route path="/store" element={<OnlineStore/>}>
-                            <Route path="admin-panel" element={<AdminPanel/>}/>
+                        <Route path="questions" element={<Questions/>}/>
+                        <Route path="store" element={<OnlineStore/>}>
+                            <Route path="admin-panel"  element={<AdminPanel/>}/>
                             <Route path="products" element={<AllProducts/>}/>
                             <Route path="products/:productLink" element={<Product/>}/>
                             <Route/>

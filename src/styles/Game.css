@@ -1,0 +1,10 @@
+.game{
+    display: flex;
+    justify-content: center;
+}
+
+.game__background:hover {
+    cursor: url("../assets/kitik.png"), auto;
+
+}
+

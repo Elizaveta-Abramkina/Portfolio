@@ -1,16 +1,16 @@
 import React from 'react';
 import {Link, Outlet} from "react-router-dom";
+import "../../styles/StoreNavigation.css"
 
 const StoreNavigation = () => {
     return (
         <div>
             <aside>
-                <div>
-                    <Link to="/store/admin-panel">Admin panel</Link>
-                    <Link  to='/store/products'>All products</Link>
+                <div className="store-nav">
+                    <Link className="store-nav__link" to="/store/admin-panel">Admin panel</Link>
+                    <Link className="store-nav__link"  to='/store/products'>All products</Link>
                 </div>
             </aside>
-            <Outlet/>
         </div>
     );
 };
