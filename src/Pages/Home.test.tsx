@@ -5,5 +5,6 @@ describe('test Home', () => {
     test('renders learn react link', () => {
         const wrapper = shallow(<Home/>);
         console.log(wrapper.debug())
+
     });
 })
